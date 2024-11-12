@@ -1,0 +1,14 @@
+version: 4.1.15
+steps:
+  - prompt: Click the "GitHub" button on the page.
+    commands:
+      - command: hover-text
+        text: GitHub
+        description: GitHub button on the page
+        action: click
+  - prompt: >-
+      Assert that it opens the GitHub profile in a new tab or window.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the URL is "https://github.com/basilinjoe"
