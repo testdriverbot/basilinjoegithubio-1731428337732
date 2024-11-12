@@ -1,0 +1,32 @@
+version: 4.1.15
+steps:
+  - prompt: Locate the main call to action on the page.
+    commands:
+      - command: hover-text
+        text: GitHub
+        description: GitHub button
+        action: click
+  - prompt: Locate the main call to action on the page.
+    commands:
+      - command: hover-text
+        text: Follow
+        description: Follow button on GitHub profile
+        action: click
+  - prompt: Locate the main call to action on the page.
+    commands:
+      - command: hover-text
+        text: Sign up
+        description: Sign up button on GitHub page
+        action: click
+  - prompt: Click the call to action button or link.
+    commands:
+      - command: hover-text
+        text: Sign in
+        description: Sign in button on GitHub page
+        action: click
+  - prompt: >-
+      Assert that the action performs the expected result  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the "Please fill out this field" message is displayed
