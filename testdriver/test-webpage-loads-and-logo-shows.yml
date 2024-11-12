@@ -1,0 +1,18 @@
+version: 4.1.15
+steps:
+  - prompt: Navigate to the homepage.
+    commands:
+      - command: hover-text
+        text: Basilin Joe
+        description: website logo at the top
+        action: click
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: the webpage displays "Basilin Joe"
+  - prompt: >-
+      Assert that the logo is displayed on the page.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the webpage displays "Basilin Joe" logo
